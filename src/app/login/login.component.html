@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Mat-Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('https://chattahoochee.whitewaterexpress.com/wp-content/uploads/sites/4/2020/03/yellow-bike-rentals-chattahoochee-whitewater-express-2-e1598905480969.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+    mat-card {
+      width: 400px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      background-color: rgba(252, 255, 96, 0.8);
+      border-radius: 8px;
+    }
+    mat-card-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    mat-card-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: black;
+            text-align: center;
+
+    }
+    mat-card-actions {
+      display: flex;
+      justify-content: center;
+    }
+    button[mat-raised-button] {
+      background-color: rgba(252, 255, 96, 0.8);
+      color: black;
+      font-size: 16px;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[mat-raised-button]:hover {
+      background-color: rgba(252, 255, 96, 0.8);
+    }
+    
+  </style>
+</head>
+<body>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button (click)="signin()" mat-raised-button>Connexion</button>
+    </mat-card-actions>
+  </mat-card>
+</body>
+</html>

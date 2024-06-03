@@ -1,0 +1,43 @@
+<h2>Create New Reservation</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="pickerDebut" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+    <mat-datepicker #pickerDebut></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Start Hour</mat-label>
+    <input matInput placeholder="Start Hour" formControlName="startHour" type="time">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>End Hour</mat-label>
+    <input matInput placeholder="End Hour" formControlName="endHour" type="time">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Adherent</mat-label>
+    <mat-select formControlName="adherentId">
+      <mat-option *ngFor="let adherent of adherents" [value]="adherent.id">
+        {{ adherent.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Bicycle</mat-label>
+    <mat-select formControlName="bicycleId">
+      <mat-option *ngFor="let bicycle of bicycles" [value]="bicycle.id">
+        {{ bicycle.model }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+  <button mat-raised-button type="button" (click)="close()">Cancel</button>
+
+</form>

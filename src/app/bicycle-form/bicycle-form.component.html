@@ -1,0 +1,37 @@
+<form [formGroup]="bicycleForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Id</mat-label>
+    <input matInput formControlName="id" placeholder="Enter id">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Model</mat-label>
+    <input matInput formControlName="model" placeholder="Enter model">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Color</mat-label>
+    <input matInput formControlName="color" placeholder="Enter color">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="typeId">
+      <mat-option *ngFor="let type of types" [value]="type.id">
+        {{ type.type }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div>
+    <label>Available</label>
+    <mat-radio-group formControlName="isAvailable">
+      <mat-radio-button [value]="true">Yes</mat-radio-button>
+      <mat-radio-button [value]="false">No</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="button-row">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button mat-raised-button color="accent" type="button" (click)="onCancel()">Cancel</button>
+  </div>
+</form>

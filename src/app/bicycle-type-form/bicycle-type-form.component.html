@@ -1,0 +1,25 @@
+      
+      <!-- <div class="form-item">
+        <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+      </div> -->
+  
+      <form [formGroup]="form" class="form-grid">
+
+  <div class="form-item">
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="ID" formControlName="id">
+    </mat-form-field>
+  </div>
+  <div class="form-item">
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Type" formControlName="type">
+    </mat-form-field>
+  </div>
+
+<div class="form-row">
+  <div class="form-item">
+    <div class="example-button-row">
+      <button mat-raised-button (click)="close()">Cancel</button>
+      <button mat-raised-button color="green" (click)="save()">Submit</button>
+    </div>
+  </div>

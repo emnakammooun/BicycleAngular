@@ -1,0 +1,50 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: beige;
+    padding: 10px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .overview-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .charts, .tables, .maps, .notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .chart-item {
+    flex: 1;
+  }
+  .col1{
+    background: rgba(252, 255, 96, 0.8);
+    margin-left: 50px;
+    height: 100px;
+    width: 175px;
+}

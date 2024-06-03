@@ -1,0 +1,32 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://chattahoochee.whitewaterexpress.com/wp-content/uploads/sites/4/2020/03/yellow-bike-rentals-chattahoochee-whitewater-express-2-e1598905480969.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-card {
+  width: 400px;
+  padding: 20px;
+  background: rgba(252, 255, 96, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.google-login-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.google-login-button::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png');
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}

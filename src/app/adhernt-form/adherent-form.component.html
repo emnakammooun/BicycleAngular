@@ -1,0 +1,67 @@
+<form [formGroup]="form" class="form-grid">
+    <div class="form-row">
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="ID" formControlName="id">
+        </mat-form-field>
+      </div>
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+      </div>
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Numtel" formControlName="numtel">
+        </mat-form-field>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Adresse" formControlName="adresse">
+        </mat-form-field>
+      </div>
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <mat-label>Date de naissance</mat-label>
+          <input matInput [matDatepicker]="dateNaissance" formControlName="dateNaissance">
+          <mat-datepicker-toggle matSuffix [for]="dateNaissance"></mat-datepicker-toggle>
+          <mat-datepicker #dateNaissance></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-item">
+        <mat-form-field appearance="fill">
+          <mat-label>Date d'inscription</mat-label>
+          <input matInput [matDatepicker]="dateInscription" formControlName="dateInscription">
+          <mat-datepicker-toggle matSuffix [for]="dateInscription"></mat-datepicker-toggle>
+          <mat-datepicker #dateInscription></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-item">
+        <div class="example-button-row">
+          <button mat-raised-button (click)="close()">Cancel</button>
+          <button mat-raised-button mat-primary (click)="save()">Submit</button>
+        </div>
+      </div>
+      <div class="form-item">
+        <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+      </div>
+    </div>
+  </form>
+  

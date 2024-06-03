@@ -1,0 +1,65 @@
+<app-layout></app-layout>
+
+<div class="header" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px" style="margin-right: 10px; margin-bottom: 10px; text-align: center;">
+  <h1>Dashboard</h1>
+</div>
+
+<!-- Display cards -->
+<div fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="10px" style="margin-right: 10px; margin-bottom: 10px; text-align: center;">
+  <mat-card class="col1">
+    <mat-card-header>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <mat-card-title>Adherents</mat-card-title>
+        <mat-card-content>{{ nb_Adherents }}</mat-card-content>
+      </div>
+    </mat-card-header>
+  </mat-card>
+  <mat-card class="col1">
+    <mat-card-header>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <mat-card-title>Bicycles</mat-card-title>
+        <mat-card-content>{{ nb_Bicycles }}</mat-card-content>
+      </div>
+    </mat-card-header>
+  </mat-card>
+  <mat-card class="col1">
+    <mat-card-header>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <mat-card-title>Bicycle Types</mat-card-title>
+        <mat-card-content>{{ nb_types }}</mat-card-content>
+      </div>
+    </mat-card-header>
+  </mat-card>
+</div>
+
+<!-- Display charts -->
+<div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="10px" style="margin-right: 10px; margin-bottom: 10px;">
+  <!-- Display line chart for reservations -->
+  <div style="flex: 1; min-width: 300px; margin: 10px;">
+    <div style="width: 100%">
+      <canvas baseChart
+              [datasets]="chartData"
+              [labels]="chartLabels"
+              [options]="chartOptions"
+              chartType="line">
+      </canvas>
+    </div>
+    <p fxLayoutAlign="center">Nombre total de réservations de vélos par mois</p>
+  </div>
+
+  <!-- Display pie chart for types of bicycles -->
+  <div style="flex: 1; min-width: 300px; margin: 10px;" fxLayoutAlign="end">
+    <div style="width: 50%">
+      <canvas baseChart
+              [datasets]="chartDataPie"
+              [labels]="chartLabelsPie"
+              [options]="chartOptionsPie"
+              type="pie">
+      </canvas>
+      <p fxLayoutAlign="center">Nombre total de réservations de vélos par mois</p>
+
+    </div>
+
+  </div>
+
+</div>
